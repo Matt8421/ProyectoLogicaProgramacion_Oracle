@@ -5,6 +5,7 @@ titulo.innerHTML = "Juego del número secreto";
 parrafo.innerHTML =""; */
 
 let numeroSecreto = generarNumeroSecreto();
+let intentos = 1;
 
 
 function asignarTextoElemento(elemento,texto){
@@ -15,14 +16,16 @@ function asignarTextoElemento(elemento,texto){
 function verificarIntento(){
     let numeroDeUsuario = parseInt(document.getElementById("valorUsuario").value) ;
     /* console.log(numeroSecreto); */
+    console.log(intentos);
     if (numeroDeUsuario === numeroSecreto){
-        asignarTextoElemento("p","Acertaste el número");
+        asignarTextoElemento("p",`Acertaste el número en ${intentos} ${(intentos === 1) ? "vez" : "veces" }`);
     }else {
         if(numeroDeUsuario > numeroSecreto){
             asignarTextoElemento("p","El número secreto es menor");
         } else {
             asignarTextoElemento("p","El número secreto es mayor");
         }
+        intentos++;
     }
     return;
     
