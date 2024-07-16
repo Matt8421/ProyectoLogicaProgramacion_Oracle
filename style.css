@@ -1,4 +1,4 @@
-* {
+ * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -108,4 +108,5 @@ button {
 .texto__parrafo {
     font-size: 32px;
     font-weight: 400;
-}
+} 
+
